@@ -24,7 +24,7 @@ params.minArea = 250
 params.maxArea=2000
 
 # Filter by Circularity
-params.filterByCircularity = True
+params.filterByCircularity = False
 params.minCircularity = 0.1
 
 # Filter by Convexity
@@ -34,6 +34,9 @@ params.minConvexity = 0.87
 # Filter by Inertia
 params.filterByInertia = True
 params.minInertiaRatio = 0.001
+
+params.filterByColor = False
+params.blobColor = 225
 
 # Create a detector with the parameters
 ver = (cv2.__version__).split('.')
@@ -66,15 +69,15 @@ while(True):
 #-----------------------------------------------------------------------
 
 # Text Box
-	img = np.zeros((500,800,3),np.uint8)
-	response= str(pts)
+	#img = np.zeros((500,800,3),np.uint8)
+	#response= str(pts)
 
-	cv2.putText(img, response,(0, 50),
-               cv2.FONT_HERSHEY_SIMPLEX,
-               1,(0, 0, 255),
-               lineType=cv2.LINE_AA)
+#	cv2.putText(img, response,(0, 50),
+ #              cv2.FONT_HERSHEY_SIMPLEX,
+  #             1,(0, 0, 255),
+   #            lineType=cv2.LINE_AA)
                
-	cv2.imshow('frame2', img)
+#	cv2.imshow('frame2', img)
 #-----------------------------------------------------------------------
 	
 	if cv2.waitKey(1) & 0xFF == ord('q'):
