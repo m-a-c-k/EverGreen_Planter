@@ -20,12 +20,12 @@ params.maxThreshold = 200
 
 # Filter by Area.
 params.filterByArea = True
-params.minArea = 4
+params.minArea = 80
 params.maxArea=4000
 
 # Filter by Circularity
 params.filterByCircularity = True
-params.minCircularity = 0.1
+params.minCircularity = 0.6
 
 # Filter by Convexity
 params.filterByConvexity = True
